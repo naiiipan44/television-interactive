@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wild TV</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="television">
+      <div class="television__top">
+        <div class="television__antenna television__antenna--left"></div>
+        <div class="television__antenna television__antenna--right"></div>
+        <div class="television__antenna__base"></div>
+      </div>
+
+      <div class="television__center">
+        <div class="television__screen">
+          <img
+            class="television__content"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAMLCwgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
+            alt="television content"
+          />
+        </div>
+
+        <div class="television__channels-wrapper">
+          <ul class="television__channels">
+            <li class="television__channel">
+              <button
+                class="television__button television__button--on"
+                type="button"
+              >
+                I
+              </button>
+            </li>
+            <li class="television__channel">
+              <button
+                class="television__button television__button--off"
+                type="button"
+              >
+                O
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="television__base">
+        <div class="television__foot television__foot--left"></div>
+        <div class="television__foot television__foot--right"></div>
+      </div>
+    </div>
+
+    <p class="p">
+      Based on demo by Annarita Tranfici.
+      <a
+        href="http://www.sitepoint.com/creating-vintage-television-using-bem-css3-javascript"
+        target="_blank"
+        >See article</a
+      >.
+    </p>
+
+    <script src="index.js"></script>
+  </body>
+</html>
