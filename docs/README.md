@@ -295,15 +295,17 @@ buttonGrayscale.addEventListener("click", () => {
 ```
 
 Pour basculer entre les images en couleur et en niveaux de gris, tu dois tester l'état actuel de l'image (en couleur ou en niveaux de gris), et changer la source de l'image en conséquence.
-C'est à dire ajouter ou enlever la partie `?grayscale` dans l'URL :
+C'est à dire ajouter ou enlever la partie `?grayscale` dans l'URL (mais uniquement quand la source n'est pas `"data:image/gif;base64,..."`) :
 
 ```js
 const img = document.querySelector(".television__content");
 
-if (img.src.endsWith("?grayscale")) {
-  img.src = img.src.slice(0, -"?grayscale".length);
-} else {
-  img.src += "?grayscale";
+if (!img.src.startsWith("data")) {
+  if (img.src.endsWith("?grayscale")) {
+    img.src = img.src.slice(0, -"?grayscale".length);
+  } else {
+    img.src += "?grayscale";
+  }
 }
 ```
 
