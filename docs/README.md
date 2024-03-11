@@ -300,8 +300,14 @@ C'est à dire ajouter ou enlever la partie `?grayscale` dans l'URL (mais uniquem
 ```js
 const img = document.querySelector(".television__content");
 
-if (!img.src.startsWith("data")) {
-  if (img.src.endsWith("?grayscale")) {
+const isData = img.src.startsWith("data");
+
+if (!isData) {
+  const isGrayscale = img.src.endsWith("?grayscale");
+
+  if (isGrayscale) {
+    // so sad this doesn't work :/
+    // img.src -= "?grayscale";
     img.src = img.src.slice(0, -"?grayscale".length);
   } else {
     img.src += "?grayscale";
