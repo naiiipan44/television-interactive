@@ -12,7 +12,7 @@ Le dépôt contient un fichier `index.html` à la racine. En l'ouvrant dans ton 
 
 ## Piqûre de rappel
 
-Lorsque nous chargons notre page web, le navigateur crée une représentation de cette page sous forme d'un arbre d'objets. Chaque élément HTML (tels que les titres, les paragraphes, les images, etc...) devient **un objet** dans cet arbre. Garde bien cela en tête, ça te servira un peu plus tard dans l'exercice 😉
+Lorsque tu charges une page web, ton navigateur crée une représentation de cette page sous forme d'un arbre d'objets. Chaque élément HTML (tels que les titres, les paragraphes, les images, etc...) devient **un objet** dans cet arbre. Garde bien cela en tête, ça te servira un peu plus tard dans l'exercice 😉
 
 ## Récupérer
 
@@ -74,19 +74,19 @@ index.js:4:9
 
 Cette sortie de console devrait t'aider à comprendre comment chaque méthode récupère les éléments du DOM et pourquoi elles peuvent parfois renvoyer des résultats différents.
 
-#### 🧠 **Exercice :** 
+🧠 **Exercice :** 
 
-Supprime toutes les lignes, sauf celle qui mobilise la méthode `querySelectorAll`. A présent, à la place de la méthode `console.log`, stocke la récupération des boutons dans une variable que tu appelleras `buttons`.  
+Supprime toutes les lignes, sauf celle qui appelle la méthode `querySelectorAll`. À la place de la méthode `console.log`, stocke la récupération des boutons dans une variable `buttons`.  
 
 __________________________________
 
-Une fois l'exercice réalisé, et maintenant que nous avons exploré les **différentes méthodes de récupération** des éléments du DOM, passons à une étape plus pratique : **l'écoute des événements**.
+Une fois l'exercice réalisé, et maintenant que tu as exploré les **différentes méthodes de récupération** des éléments du DOM, passons à une étape plus pratique : **l'écoute des événements**.
 
 ## Écouter
 
 Grâce à nos connaissances en JavaScript, nous savons qu'il est possible d'itérer sur un tableau ! Pour cela, plusieurs façons de faire existent, mais nous te proposons de te familiariser avec la [boucle `for...of`](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Statements/for...of).
 
-#### 🧠 **Exercice :** 
+🧠 **Exercice :** 
 
 Créé une boucle `for... of`, dont l'objectif est d'afficher en console tous les éléments contenus dans la variable `buttons` 😄. La méthode `console.log()` va t'être utile !
 
@@ -105,9 +105,9 @@ button.addEventListener("click", () => {
 });
 ```
 
-En résumé : Les deux boutons stockés dans notre variable `buttons` se sont vus ajouté le même événément : Ils déclenchent tous deux une boîte de dialogue une fois cliqués.
+En résumé, sur chacun des deux boutons stockés dans ta variable `buttons`, tu as associé un événement : les 2 boutons ouvrent une boîte de dialogue si tu cliques dessus.
 
-Pour cela, tu utilises ici la [méthode `addEventListener`](https://developer.mozilla.org/fr/docs/Web/API/EventTarget/addEventListener), qui attend 2 paramètres :
+Pour cela, tu as utilisé la [méthode `addEventListener`](https://developer.mozilla.org/fr/docs/Web/API/EventTarget/addEventListener), qui attend 2 paramètres :
 
 - le type d'événement que tu veux écouter : `"click"` (il y en [beaucoup d'autres...](https://developer.mozilla.org/fr/docs/Web/Events)).
 - le code à exécuter quand l'événement arrivera : c'est la fonction `() => { alert("Clic !"); }`
@@ -160,17 +160,16 @@ Techniquement, nous voulons modifier la valeur de l'attribut `src` de cette imag
 />
 ```
 
-Te rappelles-tu quand, dans l'introduction de cet exercice, nous disions que chaque élément HTML est **un objet** ? C'est maintenant que c'est important de le comprendre 😀
+Dans l'introduction de cet exercice, tu te rappellestu quand nous disions que chaque élément HTML était **un objet** ? C'est maintenant que c'est important de le comprendre 😀
 
-#### 🧠 **Exercice :** 
+🧠 **Exercice :** 
 
-Ton objectif va être de nommer une variable `img`, et d'y assigner l'élément du DOM correspondant à l'image.
-Pour l'identifier, tu vas devoir effectuer un **clique droit > inspecter** sur ta page web pour faire apparaître le DOM, trouver l'élément `<ìmg />` et copier son nom de classe. Tu peux utiliser la méthode `querySelector` pour y parvenir 😉
+Ton objectif est de déclarer une variable `img`, et d'y assigner l'élément du DOM correspondant à l'image.
+Pour l'identifier, tu peux effectuer un **clique droit > inspecter** sur ta page web pour faire apparaître le DOM, trouver l'élément `<ìmg />` et copier son nom de classe. Ensuite, tu peux utiliser la méthode `querySelector` pour faire ta sélection 😉
 
 ________________________________
 
-Une fois l'élément récupéré et stocké, tu vas pouvoir modifier son attribut `src`.
-Voici comment :
+Une fois l'élément récupéré et stocké, tu peux modifier son attribut `src`. Voici comment :
 
 ```js
 img.src = "https://picsum.photos/id/237/270/190?grayscale";
