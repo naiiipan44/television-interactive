@@ -160,7 +160,7 @@ Techniquement, nous voulons modifier la valeur de l'attribut `src` de cette imag
 />
 ```
 
-Dans l'introduction de cet exercice, tu te rappellestu quand nous disions que chaque élément HTML était **un objet** ? C'est maintenant que c'est important de le comprendre 😀
+Dans l'introduction de cet exercice, tu te rappelles quand nous disions que chaque élément HTML était **un objet** ? C'est maintenant que c'est important de le comprendre 😀
 
 🧠 **Exercice :** 
 
