@@ -1,4 +1,5 @@
 ## Challenge qui consistait à rendre une vieille TV interactive.
+HTML, CSS & Javascript
 
 ## Off par défaut
 
